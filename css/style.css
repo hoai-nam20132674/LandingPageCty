@@ -144,8 +144,8 @@ p {
     color: blue;
 }
 .header {
-    background: url(../images/bg_header.png);
-    background-size: auto;
+    /*background: url(../images/bg_header.png);*/
+    /*background-size: auto;*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 

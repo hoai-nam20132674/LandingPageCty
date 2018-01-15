@@ -1,145 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--
-    Bent - Bootstrap Landing Page Template by Dcrazed
-    Site: https://dcrazed.com/bent-app-landing-page-template/
-    Free for personal and commercial use under GNU GPL 3.0 license.
+	Bent - Bootstrap Landing Page Template by Dcrazed
+	Site: https://dcrazed.com/bent-app-landing-page-template/
+	Free for personal and commercial use under GNU GPL 3.0 license.
 -->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="csrf-token" content="{{ csrf_token() }}" >
-    <title>Landing Page</title>
-    <!-- Google Font -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:500,600,700,800,900,400,300' rel='stylesheet' type='text/css'>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="csrf-token" content="{{ csrf_token() }}" >
+	<title>Landing Page</title>
+	<!-- Google Font -->
+	<link href='https://fonts.googleapis.com/css?family=Raleway:500,600,700,800,900,400,300' rel='stylesheet' type='text/css'>
 
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-    
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Owl Carousel Assets -->
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
-
-
-    <!-- Pixeden Icon Font -->
-    <link rel="stylesheet" href="css/Pe-icon-7-stroke.css">
-
-    <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+	<!-- Owl Carousel Assets -->
+	<link href="css/owl.carousel.css" rel="stylesheet">
+	<link href="css/owl.theme.css" rel="stylesheet">
 
 
-    <!-- PrettyPhoto -->
-    <link href="css/prettyPhoto.css" rel="stylesheet">
+	<!-- Pixeden Icon Font -->
+	<link rel="stylesheet" href="css/Pe-icon-7-stroke.css">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<!-- Font Awesome -->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Style -->
-    <link href="css/style.css" rel="stylesheet">
 
-    <link href="css/animate.css" rel="stylesheet">
-    <!-- Responsive CSS -->
-    <link href="css/responsive.css" rel="stylesheet">
+	<!-- PrettyPhoto -->
+	<link href="css/prettyPhoto.css" rel="stylesheet">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<!-- Style -->
+	<link href="css/style.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+	<!-- Responsive CSS -->
+	<link href="css/responsive.css" rel="stylesheet">
     <link href="css/glightbox.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/style2.css"> -->
     <link href="css/codemirror.css" rel="stylesheet">
     <link rel="stylesheet" href="css/product_slide.css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
 
 <body>
-    <!-- PRELOADER -->
-    <div class="spn_hol">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
-    </div>
+	<!-- PRELOADER -->
+	<div class="spn_hol">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</div>
 
-    <!-- END PRELOADER -->
+	<!-- END PRELOADER -->
 
  <!-- =========================
      START ABOUT US SECTION
      ============================== -->
-     <div id="dang-ky-uu-dai" class="modal fade" role="dialog">
-        <div class="modal-dialog" >
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title" style="font-family: sans-serif; text-align: center;">Chỉ với 4s đăng ký nhận ngay mã giảm giá <span style="font-weight: bold; color: red;">200.000đ</span> </h4>
-                   
-                </div>
-                <div class="modal-body">
-
-                    <form role="form" action="{{URL::route('postDangky')}}" method="POST">
-                        <input type="hidden" name="_token" value="{{ csrf_token()}}">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2">
-                                @if( count($errors) > 0)
-                                    <div class="alert alert-danger " id="messageten">
-                                        
-                                        <ul>
-                                            @foreach($errors->all() as $error)
-                                                <li>{{$error}}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                    
-                                @endif
-                                <input class="form-control" id="ten" name="ten" placeholder="Họ tên" value="{{old('ten')}}">
-                                <br>
-                                <input class="form-control" id="sdt" name="sdt" placeholder="Số điện thoại" value="{{old('sdt')}}">
-                                <br>
-                                <button type="submit" class="btn btn-success submit-btn" style="font-family: sans-serif;">GỬI ĐĂNG KÝ</button>
-                            </div>
-                        </div>
-                         
-                    </form>
-                    
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
      
      <section class="header parallax home-parallax page" id="TRANGCHU">
-        <h2></h2>
-        <div class="section_overlay">
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">
-                            <img src="images/cd.png" alt="Logo" >
+     	<h2></h2>
+     	<div class="section_overlay">
+     		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     			<div class="container">
+     				<!-- Brand and toggle get grouped for better mobile display -->
+     				<div class="navbar-header">
+     					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+     						<span class="sr-only">Toggle navigation</span>
+     						<span class="icon-bar"></span>
+     						<span class="icon-bar"></span>
+     						<span class="icon-bar"></span>
+     					</button>
+     					<a class="navbar-brand" href="#">
+     						<img src="images/cd.png" alt="Logo" >
 
-                        </a>
+     					</a>
                         <div class="countdown">
                             <span id="d" style="border:1px solid yellow; border-radius: 3px; font-size: 1.2em; background-color: red; font-family: sans-serif; color: #fff; margin: 0px 0%;"></span>
                             <span id="h" style="border:1px solid yellow; border-radius: 3px; font-size: 1.2em; background-color: red;font-family: sans-serif;color: #fff; margin: 0px 0%;"></span>
@@ -147,22 +101,22 @@
                             <span id="s" style="border:1px solid yellow; border-radius: 3px; font-size: 1.2em;background-color: red;font-family: sans-serif;color: #fff; margin: 0px 0%;"></span>
                         </div>
 
-                    </div>
+     				</div>
                     
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <!-- NAV -->
-                            <li><a href="#TRANGCHU">Trang chủ</a> </li>
-                            <li><a href="#HOT">Sản phẩm hot</a> </li>
-                            <li><a href="#NOKIA8800">Nokia 8800</a></li>
-                            <li><a href="#VERTU">Vertu</a> </li>
-                            <li><a href="#DONGHO">Đồng hồ</a> </li>
-                            <li><a href="#PHUKIEN">Phụ kiện</a> </li>
+     				<!-- Collect the nav links, forms, and other content for toggling -->
+     				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     					<ul class="nav navbar-nav navbar-right">
+     						<!-- NAV -->
+     						<li><a href="#TRANGCHU">Trang chủ</a> </li>
+     						<li><a href="#HOT">Sản phẩm hot</a> </li>
+     						<li><a href="#NOKIA8800">Nokia 8800</a></li>
+     						<li><a href="#VERTU">Vertu</a> </li>
+     						<li><a href="#DONGHO">Đồng hồ</a> </li>
+     						<li><a href="#PHUKIEN">Phụ kiện</a> </li>
                             <li><a href="#LIENHE">liên hệ</a></li>
                             <li type="button"><a class="btn btn-success" role="button" href="tel:01642911168" style="font-family: sans-serif;"><i class="fa fa-phone-square" style="font-size: 100%;" aria-hidden="true"></i> xxxxxxxx</a></li>
-                        </ul>
-                    </div>
+     					</ul>
+     				</div>
                     
                         
                     <!-- <div id="countdown" style="margin-top: 0px; position: absolute; margin-left: -8%; width: 15%;">
@@ -175,12 +129,12 @@
                         <img src="images/hoa-dao-rgb.png" width="100%" height="auto" style="position: relative; margin-top: -7%;"> 
                     </div> -->
                         
-                    <!-- /.navbar-collapse -->
+     				<!-- /.navbar-collapse -->
                     
-                </div>
-                <!-- /.container- -->
+     			</div>
+     			<!-- /.container- -->
 
-            </nav>
+     		</nav>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -215,36 +169,36 @@
                     </a>
                 </div>
 
-            <!-- <div class="container home-container"> -->
-                <!-- <div class="row">
-                    <div class="col-md-12">
-                        <div class="logo text-center">
-                            <img width="200px" height="55" src="images/logo2.png" alt="">
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="row">
-                    <div class="col-md-8 col-sm-8">
-                        <div class="home_text">
-                            
-                            <h1 style="font-family: Sans-serif;">Đồng hồ Nga chính hãng. Uy tín và chất lượng</h1>
-                            <p style="font-family: Sans-serif;">Đồng hồ Nga sang trọng đẳng cấp</p>
+     		<!-- <div class="container home-container"> -->
+     			<!-- <div class="row">
+     				<div class="col-md-12">
+     					<div class="logo text-center">
+     						<img width="200px" height="55" src="images/logo2.png" alt="">
+     					</div>
+     				</div>
+     			</div> -->
+     			<!-- <div class="row">
+     				<div class="col-md-8 col-sm-8">
+     					<div class="home_text">
+     						
+     						<h1 style="font-family: Sans-serif;">Đồng hồ Nga chính hãng. Uy tín và chất lượng</h1>
+     						<p style="font-family: Sans-serif;">Đồng hồ Nga sang trọng đẳng cấp</p>
 
-                            <div class="download-btn">
-                                
-                                <a class="btn home-btn wow fadeInLeft" href="#DOWNLOAD">Liên hệ</a>
-                                <a class="tuor btn wow fadeInRight" href="#ABOUT">Xem thêm <i class="fa fa-angle-down"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-md-offset-1 col-sm-4">
-                        <div class="home-iphone">
-                            <img src="images/5.png" alt="">
-                        </div>
-                    </div>
-                </div> -->
-            <!-- </div> -->
-        </div>
+     						<div class="download-btn">
+     							
+     							<a class="btn home-btn wow fadeInLeft" href="#DOWNLOAD">Liên hệ</a>
+     							<a class="tuor btn wow fadeInRight" href="#ABOUT">Xem thêm <i class="fa fa-angle-down"></i></a>
+     						</div>
+     					</div>
+     				</div>
+     				<div class="col-md-3 col-md-offset-1 col-sm-4">
+     					<div class="home-iphone">
+     						<img src="images/5.png" alt="">
+     					</div>
+     				</div>
+     			</div> -->
+     		<!-- </div> -->
+     	</div>
      </section>
 
      <!-- END HEADER SECTION -->
@@ -260,31 +214,31 @@
     
 
      <section class="about page" id="HOT" style="background-color: #ffebab">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <!-- ABOUT US SECTION TITLE-->
-                    <div class="section_title" >
-                        <h2 style="font-family: Sans-serif; color: red; text-align: center;  ">Sản phẩm hot</h2>
-                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> -->
-                    </div>
-                </div>
+     	<div class="container">
+     		<div class="row">
+     			<div class="col-md-10 col-md-offset-1">
+     				<!-- ABOUT US SECTION TITLE-->
+     				<div class="section_title" >
+     					<h2 style="font-family: Sans-serif; color: red; text-align: center;  ">Sản phẩm hot</h2>
+     					<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> -->
+     				</div>
+     			</div>
 
-            </div>
-        </div>
+     		</div>
+     	</div>
 
-        <div class="inner_about_area">
-            <!-- <div class="container" > -->
-                <div class="row" style="margin-bottom: 10px;">
+     	<div class="inner_about_area">
+     		<!-- <div class="container" > -->
+     	        <div class="row" style="margin-bottom: 10px;">
                 <!-- <div id="owl-demo" class="owl-carousel"> -->
-                    <div class="col-md-4" data-toggle="modal" data-target="#Modal1">
-                        <div class="about_phone wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+     				<div class="col-md-4" data-toggle="modal" data-target="#Modal1">
+     					<div class="about_phone wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
 
 
-                            <img src="images/5.png" alt="" width="380px" height="380px" class="img-thumbnail zoomItem" >
+     						<img src="images/5.png" alt="" width="380px" height="380px" class="img-thumbnail zoomItem" >
 
                         </div>    
-                    </div>
+     				</div>
                     <div id="Modal1" class="modal fade" role="dialog">
                         <div class="modal-dialog">
 
@@ -515,7 +469,7 @@
                         </div>
                         
                     </div>
-                </div>  
+     			</div>	
                 <!-- </div> -->
                 
                 
@@ -923,23 +877,23 @@
      ============================== -->
      <div class="clearfix"></div>
      <section class="apps_screen page" id="VERTU">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 wow fadeInBig" data-wow-duration="1s">
-                    <!-- APPS SCREEN TITLE -->
-                    <div class="section_title">
-                        <h2 style="font-family: Sans-serif; text-align: center;">Vertu</h2>
-                                                  
-                    </div>
-                    <!-- END APPS SCREEN TITLE -->
-                </div>
-            </div>
-        </div>
+     	<div class="container">
+     		<div class="row">
+     			<div class="col-md-12 wow fadeInBig" data-wow-duration="1s">
+     				<!-- APPS SCREEN TITLE -->
+     				<div class="section_title">
+     					<h2 style="font-family: Sans-serif; text-align: center;">Vertu</h2>
+     					                          
+     				</div>
+     				<!-- END APPS SCREEN TITLE -->
+     			</div>
+     		</div>
+     	</div>
 
-        <div class="screen_slider">
-            <div id="demo" class="wow bounceInRight" data-wow-duration="1s">
+     	<div class="screen_slider">
+     		<div id="demo" class="wow bounceInRight" data-wow-duration="1s">
                 
-                <div id="owl-demo" class="owl-carousel">
+     			<div id="owl-demo" class="owl-carousel">
                     
 
                     <div class="about_phone wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
@@ -1031,9 +985,9 @@
                             </div>
                         </div> -->
                     </div>
-                </div>
-            </div>
-        </div>
+     			</div>
+     		</div>
+     	</div>
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-md-offset-5">
@@ -1129,40 +1083,40 @@
 
      <div class="clearfix"></div>
      <!-- <section class="fun_facts parallax">
-        <div class="section_overlay">
-            <div class="container wow bounceInLeft" data-wow-duration="1s">
-                <div class="row text-center">
-                    <div class="col-md-3">
-                        <div class="single_fun_facts">
-                            <i class="pe-7s-cloud-download"></i>
-                            <h2><span  class="counter_num">699</span> <span>+</span></h2>
-                            <p>Downloads</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="single_fun_facts">
-                            <i class="pe-7s-look"></i>
-                            <h2><span  class="counter_num">1999</span> <span>+</span></h2>
-                            <p>Likes</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="single_fun_facts">
-                            <i class="pe-7s-comment"></i>
-                            <h2><span  class="counter_num">199</span> <span>+</span></h2>
-                            <p>Feedbacks</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="single_fun_facts">
-                            <i class="pe-7s-cup"></i>
-                            <h2><span  class="counter_num">10</span> <span>+</span></h2>
-                            <p>Awards</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     	<div class="section_overlay">
+     		<div class="container wow bounceInLeft" data-wow-duration="1s">
+     			<div class="row text-center">
+     				<div class="col-md-3">
+     					<div class="single_fun_facts">
+     						<i class="pe-7s-cloud-download"></i>
+     						<h2><span  class="counter_num">699</span> <span>+</span></h2>
+     						<p>Downloads</p>
+     					</div>
+     				</div>
+     				<div class="col-md-3">
+     					<div class="single_fun_facts">
+     						<i class="pe-7s-look"></i>
+     						<h2><span  class="counter_num">1999</span> <span>+</span></h2>
+     						<p>Likes</p>
+     					</div>
+     				</div>
+     				<div class="col-md-3">
+     					<div class="single_fun_facts">
+     						<i class="pe-7s-comment"></i>
+     						<h2><span  class="counter_num">199</span> <span>+</span></h2>
+     						<p>Feedbacks</p>
+     					</div>
+     				</div>
+     				<div class="col-md-3">
+     					<div class="single_fun_facts">
+     						<i class="pe-7s-cup"></i>
+     						<h2><span  class="counter_num">10</span> <span>+</span></h2>
+     						<p>Awards</p>
+     					</div>
+     				</div>
+     			</div>
+     		</div>
+     	</div>
      </section> -->
 
      <!-- END FUN FACTS -->
@@ -1938,70 +1892,70 @@
     </section>
 
      <section class="contact page" id="LIENHE">
-        <div class="section_overlay">
-            <div class="container">
-                <div class="col-md-10 col-md-offset-1 wow bounceIn">
-                    <!-- Start Contact Section Title-->
-                    <div class="section_title">
-                        <h2 style="font-family: sans-serif;text-align: center;">Liên hệ với chúng tôi</h2>
-                        <p style="font-family: sans-serif;">Hãy gọi điện trực tiếp cho chúng tôi để đặt hàng hoặc điền thông tin vào phần yêu cầu chúng tôi sẽ gọi điện trực tiếp tư vấn cho quý khách hàng</p>
-                    </div>
-                </div>
-            </div>
+     	<div class="section_overlay">
+     		<div class="container">
+     			<div class="col-md-10 col-md-offset-1 wow bounceIn">
+     				<!-- Start Contact Section Title-->
+     				<div class="section_title">
+     					<h2 style="font-family: sans-serif;text-align: center;">Liên hệ với chúng tôi</h2>
+     					<p style="font-family: sans-serif;">Hãy gọi điện trực tiếp cho chúng tôi để đặt hàng hoặc điền thông tin vào phần yêu cầu chúng tôi sẽ gọi điện trực tiếp tư vấn cho quý khách hàng</p>
+     				</div>
+     			</div>
+     		</div>
 
-            <div class="contact_form wow bounceIn">
-                <div class="container">
+     		<div class="contact_form wow bounceIn">
+     			<div class="container">
 
-                    <!-- START ERROR AND SUCCESS MESSAGE -->
-                    <div class="form_error text-center">
-                        <div class="name_error hide error">Please Enter your name</div>
-                        <div class="email_error hide error">Please Enter your Email</div>
-                        <div class="email_val_error hide error">Please Enter a Valid Email Address</div>
-                        <div class="message_error hide error">Please Enter Your Message</div>
-                    </div>
-                    <div class="Sucess"></div>
-                    <!-- END ERROR AND SUCCESS MESSAGE -->
+     				<!-- START ERROR AND SUCCESS MESSAGE -->
+     				<div class="form_error text-center">
+     					<div class="name_error hide error">Please Enter your name</div>
+     					<div class="email_error hide error">Please Enter your Email</div>
+     					<div class="email_val_error hide error">Please Enter a Valid Email Address</div>
+     					<div class="message_error hide error">Please Enter Your Message</div>
+     				</div>
+     				<div class="Sucess"></div>
+     				<!-- END ERROR AND SUCCESS MESSAGE -->
 
-                    <!-- CONTACT FORM starts here, Go to contact.php and add your email ID, thats it.-->    
-                    <form role="form" action="{{URL::route('postDangky')}}" method="POST">
+     				<!-- CONTACT FORM starts here, Go to contact.php and add your email ID, thats it.-->    
+     				<form role="form" action="{{URL::route('postDangky')}}" method="POST">
                         <input type="hidden" name="_token" value="{{ csrf_token()}}">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <input type="text" class="form-control" name="ten" id="ten" placeholder="Họ tên">
-                                <input type="text" class="form-control" name="sdt" id="sdt" placeholder="Số điện thoại">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                            </div>
+     					<div class="row">
+     						<div class="col-md-4">
+     							<input type="text" class="form-control" name="ten" id="ten" placeholder="Họ tên">
+     							<input type="text" class="form-control" name="sdt" id="sdt" placeholder="Số điện thoại">
+     							<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+     						</div>
 
 
-                            <div class="col-md-8">
-                                <textarea class="form-control" name="yeu_cau" id="message" rows="25" cols="10" placeholder="  Message Texts..."></textarea>
-                                <button type="submit" class="btn btn-default submit-btn">Gửi thông tin</button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- END FORM --> 
-                </div>
-            </div>
+     						<div class="col-md-8">
+     							<textarea class="form-control" name="yeu_cau" id="message" rows="25" cols="10" placeholder="  Message Texts..."></textarea>
+     							<button type="submit" class="btn btn-default submit-btn">Gửi thông tin</button>
+     						</div>
+     					</div>
+     				</form>
+     				<!-- END FORM --> 
+     			</div>
+     		</div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 wow bounceInLeft">
-                        <div class="social_icons">
-                            <ul>
-                                <li><a href=""><i class="fa fa-facebook" style="color: blue;"></i></a>
-                                </li>
-                                <li><a href=""><i class="fa fa-twitter" style="color: red;"></i></a>
-                                </li>
-                                <li><a href="http://donghonga.com.vn" target="_blank"><i class="fa fa-dribbble" style="color: red;"></i></a>
-                                </li>
-                                <li><a href="https://www.youtube.com/channel/UCIhLayiHW8_NjjGDfaIkU5g" target="_blank"><i class="fa fa-youtube" style="color: red;"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     		<div class="container">
+     			<div class="row">
+     				<div class="col-md-12 wow bounceInLeft">
+     					<div class="social_icons">
+     						<ul>
+     							<li><a href=""><i class="fa fa-facebook" style="color: blue;"></i></a>
+     							</li>
+     							<li><a href=""><i class="fa fa-twitter" style="color: red;"></i></a>
+     							</li>
+     							<li><a href="http://donghonga.com.vn" target="_blank"><i class="fa fa-dribbble" style="color: red;"></i></a>
+     							</li>
+     							<li><a href="https://www.youtube.com/channel/UCIhLayiHW8_NjjGDfaIkU5g" target="_blank"><i class="fa fa-youtube" style="color: red;"></i></a>
+     							</li>
+     						</ul>
+     					</div>
+     				</div>
+     			</div>
+     		</div>
+     	</div>
      </section>
      <!-- END CONTACT -->
 
@@ -2012,44 +1966,44 @@
      <div class="clearfix"></div>
 
      <section class="subscribe parallax subscribe-parallax" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
-        <div class="section_overlay wow lightSpeedIn">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
+     	<div class="section_overlay wow lightSpeedIn">
+     		<div class="container">
+     			<div class="row">
+     				<div class="col-md-10 col-md-offset-1">
 
-                        <!-- Start Subscribe Section Title -->
-                        <div class="section_title">
-                            <h2>SUBSCRIBE US</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                        </div>
-                        <!-- End Subscribe Section Title -->
-                    </div>
-                </div>
-            </div>
+     					<!-- Start Subscribe Section Title -->
+     					<div class="section_title">
+     						<h2>SUBSCRIBE US</h2>
+     						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+     					</div>
+     					<!-- End Subscribe Section Title -->
+     				</div>
+     			</div>
+     		</div>
 
-            <div class="container">
-                <div class="row  wow lightSpeedIn">
-                    <div class="col-md-6 col-md-offset-3">
-                        <!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
-                        <div class="subscription-success"></div>
-                        <div class="subscription-error"></div>
-                        <!-- Check this topic on how to add email subscription list, http://kb.mailchimp.com/lists/signup-forms/host-your-own-signup-forms -->
-                        <form id="mc-form" action="https://designscrazed.us8.list-manage.com/subscribe/post" method="POST" class="subscribe_form">                         
-                            <input type="hidden" name="u" value="6908378c60c82103f3d7e8f1c">
-                            <input type="hidden" name="id" value="8c5074025d">
-                            <div class="form-group">
-                                <!-- EMAIL INPUT BOX -->
-                                <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" class="required email form-control" id="mce-EMAIL" placeholder="Enter Email Address" value="" >                                 
-                            </div>
-                            <!-- SUBSCRIBE BUTTON -->
-                            <button type="submit" class="btn btn-default subs-btn">Submit</button>
-                        </form>
+     		<div class="container">
+     			<div class="row  wow lightSpeedIn">
+     				<div class="col-md-6 col-md-offset-3">
+     					<!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
+     					<div class="subscription-success"></div>
+     					<div class="subscription-error"></div>
+     					<!-- Check this topic on how to add email subscription list, http://kb.mailchimp.com/lists/signup-forms/host-your-own-signup-forms -->
+     					<form id="mc-form" action="https://designscrazed.us8.list-manage.com/subscribe/post" method="POST" class="subscribe_form">                         
+     						<input type="hidden" name="u" value="6908378c60c82103f3d7e8f1c">
+     						<input type="hidden" name="id" value="8c5074025d">
+     						<div class="form-group">
+     							<!-- EMAIL INPUT BOX -->
+     							<input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" class="required email form-control" id="mce-EMAIL" placeholder="Enter Email Address" value="" >                                 
+     						</div>
+     						<!-- SUBSCRIBE BUTTON -->
+     						<button type="submit" class="btn btn-default subs-btn">Submit</button>
+     					</form>
 
 
-                    </div>
-                </div>
-            </div>
-        </div>
+     				</div>
+     			</div>
+     		</div>
+     	</div>
      </section>
 
      <!-- END SUBSCRIPBE FORM -->
@@ -2060,25 +2014,25 @@
      ============================== -->
 
      <section class="copyright">
-        <h2></h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="copy_right_text">
-                        <!-- COPYRIGHT TEXT -->
-                        <p>Copyright &copy; 2017. All Rights Reserved.</p>        
-                        <p>A theme by <a href="https://dcrazed.com/">Dcrazed</a></p>
-                    </div>
+     	<h2></h2>
+     	<div class="container">
+     		<div class="row">
+     			<div class="col-md-6">
+     				<div class="copy_right_text">
+     					<!-- COPYRIGHT TEXT -->
+     					<p>Copyright &copy; 2017. All Rights Reserved.</p>        
+     					<p>A theme by <a href="https://dcrazed.com/">Dcrazed</a></p>
+     				</div>
 
-                </div>
+     			</div>
 
-                <div class="col-md-6">
-                    <div class="scroll_top">
-                        <a href="#HOME"><i class="fa fa-angle-up"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+     			<div class="col-md-6">
+     				<div class="scroll_top">
+     					<a href="#HOME"><i class="fa fa-angle-up"></i></a>
+     				</div>
+     			</div>
+     		</div>
+     	</div>
      </section>
      <!-- END FOOTER -->
 

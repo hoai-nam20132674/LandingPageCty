@@ -16,8 +16,8 @@ class DangKyTable extends Migration
         //
         Schema::create('dang_ky_uu_dai', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ten', 100)->unique();
-            $table->string('sdt',20)->unique();
+            $table->string('ten', 100);
+            $table->string('sdt',20);
             $table->timestamps();
         });
     }

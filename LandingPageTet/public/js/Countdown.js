@@ -1,15 +1,18 @@
 $(document).ready(function(){
-	// function checkRequest(){
-	// 	var ten = document.getElementById("ten").val();
-	// 	var sdt = document.getElementById("sdt").val();
-	// 	if(ten==""){
-	// 		document.getElementById("messageten").innerHTML ="Vui lòng nhập tên";
-	// 	}
-	// 	if(sdt==""){
-	// 		document.getElementById("messagesdt").innerHTML ="Vui lòng nhập số điện thoại";
-	// 	}
-
-	// }
+	// $(".postDangky").click(function(event){
+	// 	var ten = $('input[name=ten]');
+	// 	var sdt = $('input[name=sdt]');
+		// $.post( "/postDangky", { ten: "ten.val()", sdt: "sdt.val()" });
+	// 	$.ajax({  
+ //            type: "POST",  
+ //            url: "/postDangky",  
+ //            data: {'topic': topic},  
+ //            success: function(dataString) {  
+ //                $('#mentor_list').load('/mentorlist');
+ //                console.log('**mentor_list div updated via ajax.**'); 
+ //            }  
+ //        });
+	// });
 	$("div.alert").delay(3000).slideUp();
 
 	$("#dang-ky-uu-dai").modal('show');

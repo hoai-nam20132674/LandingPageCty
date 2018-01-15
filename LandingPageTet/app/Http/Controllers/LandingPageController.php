@@ -13,10 +13,14 @@ class LandingPageController extends Controller
     public function index(){
     	return View('index');
     }
+    public function index2(){
+        return View('index2');
+    }
     public function postDangky(dang_ky_uu_daiRequest $request){
     	$new = new dangkyModel;
     	$new->ten=$request->ten;
     	$new->sdt=$request->sdt;
     	$new->save();
+        return redirect('Landing');
     }
 }

@@ -15,4 +15,5 @@
 //     return view('welcome');
 // });
 Route::get('/',['as'=>'main','uses'=>'LandingPageController@index']);
+Route::get('/Landing',['as'=>'main2','uses'=>'LandingPageController@index2']);
 Route::post('/postDangky',['as'=>'postDangky','uses'=>'LandingPageController@postDangky']);

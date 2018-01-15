@@ -145,7 +145,7 @@ p {
     color: blue;
 }
 .header {
-    background: url(../images/bg_header.png);
+    /*background: url(../images/bg_header.png);*/
     background-size: auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -408,8 +408,8 @@ tuor:visited {
     bottom: -8px;
 }
 div.carousel-inner .item img {
-    border: 2px solid #f39c12;
-    border-radius: 50%;
+    /*border: 2px solid #f39c12;*/
+    /*border-radius: 50%;*/
     padding: 3px;
 }
 .testimonial_caption {
